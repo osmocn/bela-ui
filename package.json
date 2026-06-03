@@ -10,8 +10,12 @@
     "format": "biome format --write"
   },
   "dependencies": {
+    "@types/mdx": "^2.0.13",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "fumadocs-core": "^16.9.3",
+    "fumadocs-mdx": "^15.0.10",
+    "fumadocs-ui": "^16.9.3",
     "lucide-react": "^1.17.0",
     "next": "16.2.7",
     "radix-ui": "^1.4.3",
