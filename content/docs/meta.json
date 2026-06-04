@@ -1,0 +1,11 @@
+{
+  "pages": [
+    "index",
+    "--- Getting Started ---",
+    "prerequisites",
+    "ai-usage",
+    "cli",
+    "--- Components ---",
+    "components/notification-item"
+  ]
+}

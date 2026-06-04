@@ -130,3 +130,7 @@
     @apply font-sans;
   }
 }
+
+#nd-sidebar {
+  @apply w-fit bg-background;
+}
