@@ -9,7 +9,9 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Script from "next/script";
 import { Breadcrumb } from "@/components/breadcrumb";
+import DocAIOpener from "@/components/doc-ai-opener";
 import { getMDXComponents } from "@/components/mdx";
+import { toRawDocPath } from "@/lib/docs-markdown";
 import { absoluteUrl, humanizeSlugSegment, siteConfig } from "@/lib/site";
 import { source } from "@/lib/source";
 
@@ -78,7 +80,10 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
       toc={page.data.toc}
       full={page.data.full}
       breadcrumb={{ includeRoot: true, includePage: true }}
-      footer={{ className: "my-8 [&_a>p:last-child]:hidden [&_a]:bg-muted/50 [&_a]:py-2 [&_a]:w-fit text-sm flex justify-between" }}
+      footer={{
+        className:
+          "my-8 [&_a>p:last-child]:hidden [&_a]:bg-muted/50 [&_a]:py-2 [&_a]:w-fit text-sm flex justify-between",
+      }}
       slots={{ breadcrumb: Breadcrumb }}
     >
       <Script
@@ -87,8 +92,20 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
       >
         {JSON.stringify(structuredData)}
       </Script>
-      <DocsTitle className="text-4xl font-semibold mt-4">{page.data.title}</DocsTitle>
-      <DocsDescription className="text-base">{page.data.description}</DocsDescription>
+      <div className="flex items-center justify-between">
+        <DocsTitle className="text-4xl font-bold tracking-tight mt-4">
+          {page.data.title}
+        </DocsTitle>
+        <div className="relative top-1 hidden md:inline-flex">
+          <DocAIOpener
+            markdownPath={toRawDocPath(pathname)}
+            pagePath={pathname}
+          />
+        </div>
+      </div>
+      <DocsDescription className="text-base">
+        {page.data.description}
+      </DocsDescription>
       <DocsBody>
         <MDX
           components={getMDXComponents({

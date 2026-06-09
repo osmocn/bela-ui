@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { RootProvider } from "fumadocs-ui/provider/next";
-import { absoluteUrl, getSiteUrl, siteConfig } from "@/lib/site";
 import { Navbar } from "@/components/navbar";
+import { Toaster } from "@/components/ui/sonner";
+import { absoluteUrl, getSiteUrl, siteConfig } from "@/lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -80,7 +81,9 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <RootProvider theme={{ defaultTheme: "dark", enableSystem: false }}>
           <Navbar />
-          {children}</RootProvider>
+          {children}
+          <Toaster />
+        </RootProvider>
       </body>
     </html>
   );
