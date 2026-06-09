@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
   title: {
-    default: "Bela UI | Notification UI Library for React and shadcn/ui",
+    default: "Bela UI | Notification Component Library for React and shadcn/ui",
     template: "%s | Bela UI",
   },
   description: siteConfig.description,
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "/",
-    title: "Bela UI | Notification UI Library for React and shadcn/ui",
+    title: "Bela UI | Notification Component Library for React and shadcn/ui",
     description: siteConfig.description,
     siteName: siteConfig.name,
     images: [
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bela UI | Notification UI Library for React and shadcn/ui",
+    title: "Bela UI | Notification Component Library for React and shadcn/ui",
     description: siteConfig.description,
     images: [absoluteUrl("/twitter-image")],
   },

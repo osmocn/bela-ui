@@ -53,7 +53,7 @@ export default function OpenGraphImage() {
               background: "#111827",
             }}
           />
-          Notification UI Library
+          Notification Component Library
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
@@ -76,8 +76,8 @@ export default function OpenGraphImage() {
               color: "#3f3f46",
             }}
           >
-            Notification components for React, Next.js, shadcn/ui, and Tailwind
-            CSS.
+            Copy-paste notification components for React, Next.js, and
+            shadcn/ui projects.
           </div>
         </div>
 

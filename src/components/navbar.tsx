@@ -31,7 +31,11 @@ export function Navbar() {
     <header className="sticky top-0 z-40 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="mx-auto flex h-16 w-full items-center justify-between px-4 sm:px-6">
         <Link href="/" className="text-base font-semibold tracking-tight">
-          {siteConfig.name}
+          <img
+            src="/images/bela/bela-ui.svg"
+            alt="Bela UI"
+            className="h-4"
+          />
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">

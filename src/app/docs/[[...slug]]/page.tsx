@@ -63,9 +63,9 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
       url: absoluteUrl(pathname),
       about: [
         siteConfig.name,
-        "notification UI library",
-        "React UI components",
-        "shadcn/ui",
+        "notification component library",
+        "React components",
+        "shadcn/ui projects",
       ],
       isPartOf: {
         "@type": "WebSite",

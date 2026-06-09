@@ -24,19 +24,20 @@ export const siteConfig = {
   name: "Bela UI",
   shortName: "Bela",
   description:
-    "Bela UI is a notification UI library for React, Next.js, shadcn/ui, and Tailwind CSS.",
+    "Bela UI is a source-available notification component library for React, Next.js, and shadcn/ui projects built with Tailwind CSS.",
   repoUrl: "https://github.com/osmocn/bela-ui",
   keywords: [
     "Bela UI",
     "Bela",
-    "notification UI library",
+    "notification component library",
     "React notification components",
+    "copy-paste React components",
     "shadcn/ui notification components",
     "Tailwind CSS notification components",
-    "notification center UI",
-    "inbox UI component",
-    "toast UI component",
-    "AI-friendly UI library",
+    "notification center component",
+    "inbox component",
+    "toast component",
+    "AI-friendly component library",
   ],
 } as const;
 

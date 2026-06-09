@@ -69,7 +69,7 @@ export function GET() {
     `# ${siteConfig.name}`,
     `> ${siteConfig.description}`,
     "",
-    `${siteConfig.name} is a source-available notification UI library for React, Next.js, shadcn/ui, and Tailwind CSS.`,
+    `${siteConfig.name} is a source-available notification component library for React, Next.js, and shadcn/ui projects built with Tailwind CSS.`,
     "Use the docs below as the canonical reference for installation, component usage, and customization guidance.",
     "",
     "## Project",
