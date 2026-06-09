@@ -3,8 +3,6 @@ title: Notification Item
 description: Bela UI Notification Item component for alerts, activity updates, and inbox messages.
 ---
 
-import NotificationItemDemo from "@/components/notification-item-demo";
-
 ## Preview
 
 <Tabs
@@ -31,10 +29,10 @@ import NotificationItemDemo from "@/components/notification-item-demo";
 ## Installation
 
 <Tabs
-  items={["Command", "Manual"]}
+  items={["CLI", "Manual"]}
   className="border-none bg-transparent"
 >
-  <Tab value="Command" className="mt-3 border-none bg-transparent p-0">
+  <Tab value="CLI" className="mt-3 border-none bg-transparent p-0">
     <Tabs
       items={["npx", "pnpm", "yarn", "bun"]}
       groupId="installation-tabs"
@@ -74,9 +72,7 @@ bunx bela-ui add notification-item
   </Tab>
 
   <Tab value="Manual" className="mt-3 border-none bg-transparent p-0">
-    ### Copy the component
-
-    Copy the source code into your project.
+    1. Copy the source code into your project.
 
     <include
       cwd
@@ -86,57 +82,30 @@ bunx bela-ui add notification-item
       src/components/bela-ui/notification-item.tsx
     </include>
 
-    ### Install dependencies
-
-```bash
-npm install lucide-react
-```
-
-    ### Add required utilities
-
-    Make sure your project includes:
-
-    - Tailwind CSS
-    - shadcn/ui
-    - `cn()` utility
+    2. Update the import paths to match your project setup.
   </Tab>
 </Tabs>
 
 ## Usage
 
-```tsx
-import { NotificationItem } from "@/components/bela-ui/notification-item";
-
-export default function Example() {
-  return (
-    <NotificationItem
-      notification={{
-        id: "1",
-        title: "New comment",
-        description: "Sarah commented on your post.",
-        createdAt: new Date(),
-        read: false,
-      }}
-    />
-  );
-}
-```
+<include
+      cwd
+      lang="tsx"
+      meta='title="src/components/notification-item-demo.tsx"'
+    >
+      src/components/notification-item-demo.tsx
+    </include>
 
 ## Props
 
-### NotificationItem
-
-| Prop | Type | Default | Description |
-| --- | --- | --- | --- |
-| `notification` | `Notification` | `undefined` | Notification object to render |
-| `className` | `string` | `undefined` | Additional CSS classes |
-
 ### Notification
 
-| Property | Type | Default | Description |
-| --- | --- | --- | --- |
-| `id` | `string` | `undefined` | Unique notification identifier |
-| `title` | `string` | `undefined` | Notification title |
-| `description` | `string` | `undefined` | Additional description text |
-| `createdAt` | `Date` | `undefined` | Notification timestamp |
-| `read` | `boolean` | `false` | Whether the notification has been read |
+| Property | Type | Description |
+|----------|------|-------------|
+| `id` | `string` | Unique notification identifier. |
+| `title` | `string` | Notification title. |
+| `body` | `string \| null` | Optional notification content. |
+| `actionUrl` | `string \| null` | Optional URL to navigate to when clicked. |
+| `readAt` | `string \| null` | Read timestamp. `null` indicates unread. |
+| `archivedAt` | `string \| null` | Archive timestamp. |
+| `createdAt` | `string` | Notification creation timestamp. |

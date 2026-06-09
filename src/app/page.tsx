@@ -68,10 +68,10 @@ export default function HomePage() {
       </Script>
 
       <main className="relative overflow-hidden">
-        <div className="absolute inset-x-0 top-0 -z-10 h-[32rem] bg-[radial-gradient(circle_at_top,rgba(24,24,27,0.1),transparent_50%)]" />
+        <div className="absolute inset-x-0 top-0 -z-10 h-[32rem] bg-[radial-gradient(circle_at_top,rgba(24,24,27,0.08),transparent_50%)] dark:bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_50%)]" />
         <section className="mx-auto flex w-full max-w-5xl flex-col gap-12 px-6 pb-20 pt-16 sm:px-10 lg:px-12 lg:pt-24">
           <div className="max-w-4xl space-y-6">
-            <div className="inline-flex items-center rounded-full border border-amber-200 bg-amber-50 px-4 py-2 text-sm text-amber-900 shadow-sm">
+            <div className="inline-flex items-center rounded-full border border-amber-300/70 bg-amber-50 px-4 py-2 text-sm text-amber-900 shadow-sm dark:border-amber-900/60 dark:bg-amber-950/40 dark:text-amber-200">
               Work in progress: Bela UI is early, with more components and
               examples on the way.
             </div>
@@ -133,11 +133,11 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="rounded-[2rem] border border-border/80 bg-zinc-950 p-8 text-zinc-100 shadow-sm">
-              <p className="text-sm uppercase tracking-[0.2em] text-zinc-400">
+            <div className="rounded-[2rem] border border-zinc-200 bg-zinc-50 p-8 text-zinc-900 shadow-sm dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-100">
+              <p className="text-sm uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
                 Quick start
               </p>
-              <pre className="mt-5 overflow-x-auto rounded-2xl border border-white/10 bg-black/30 p-5 text-sm leading-7 text-zinc-200">
+              <pre className="mt-5 overflow-x-auto rounded-2xl border border-zinc-200 bg-white/80 p-5 text-sm leading-7 text-zinc-800 dark:border-white/10 dark:bg-black/30 dark:text-zinc-200">
                 <code>{`pnpm dlx bela-ui add notification-item`}</code>
               </pre>
             </div>

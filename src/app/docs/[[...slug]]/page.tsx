@@ -8,6 +8,7 @@ import { createRelativeLink } from "fumadocs-ui/mdx";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Script from "next/script";
+import { Breadcrumb } from "@/components/breadcrumb";
 import { getMDXComponents } from "@/components/mdx";
 import { absoluteUrl, humanizeSlugSegment, siteConfig } from "@/lib/site";
 import { source } from "@/lib/source";
@@ -73,15 +74,21 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
   ];
 
   return (
-    <DocsPage toc={page.data.toc} full={page.data.full}>
+    <DocsPage
+      toc={page.data.toc}
+      full={page.data.full}
+      breadcrumb={{ includeRoot: true, includePage: true }}
+      footer={{ className: "my-8 [&_a>p:last-child]:hidden [&_a]:bg-muted/50 [&_a]:py-2 [&_a]:w-fit text-sm flex justify-between" }}
+      slots={{ breadcrumb: Breadcrumb }}
+    >
       <Script
         id={`docs-structured-data-${slug.join("-") || "index"}`}
         type="application/ld+json"
       >
         {JSON.stringify(structuredData)}
       </Script>
-      <DocsTitle>{page.data.title}</DocsTitle>
-      <DocsDescription>{page.data.description}</DocsDescription>
+      <DocsTitle className="text-4xl font-semibold mt-4">{page.data.title}</DocsTitle>
+      <DocsDescription className="text-base">{page.data.description}</DocsDescription>
       <DocsBody>
         <MDX
           components={getMDXComponents({

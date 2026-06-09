@@ -1,8 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
-@import 'fumadocs-ui/css/neutral.css';
-@import 'fumadocs-ui/css/preset.css';
+@import "fumadocs-ui/css/neutral.css";
+@import "fumadocs-ui/css/preset.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -86,7 +86,7 @@
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
+  --background: oklch(0 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
@@ -133,4 +133,38 @@
 
 #nd-sidebar {
   @apply w-fit bg-background;
+}
+
+#nd-sidebar > div:first-child {
+  @apply hidden;
+}
+
+#nd-sidebar[data-sidebar-placeholder],
+#nd-toc {
+  top: 4rem;
+  height: calc(100dvh - 4rem);
+}
+
+[data-toc-popover] {
+  top: 4rem;
+}
+
+#nd-sidebar p {
+  @apply font-semibold;
+}
+
+#nd-sidebar a[href="/docs/components"] {
+  @apply font-semibold text-foreground mt-4;
+}
+
+#nd-sidebar a {
+  @apply text-neutral-700 font-medium dark:text-neutral-400 py-1.5;
+}
+
+#nd-sidebar a[data-active="true"] {
+  @apply text-fd-primary dark:text-fd-primary;
+}
+
+td code {
+  @apply rounded px-1 bg-amber-500/10 text-amber-700 dark:bg-amber-500/15 dark:text-amber-400;
 }
