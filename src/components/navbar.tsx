@@ -34,7 +34,7 @@ export function Navbar() {
           <img
             src="/images/bela/bela-ui.svg"
             alt="Bela UI"
-            className="h-4"
+            className="h-4 invert dark:invert-0"
           />
         </Link>
 

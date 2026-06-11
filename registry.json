@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "bela-ui",
+  "homepage": "https://github.com/osmocn/bela-ui",
+  "items": [
+    {
+      "name": "notification-item",
+      "type": "registry:ui",
+      "title": "Notification Item",
+      "description": "Bela UI Notification Item component for alerts, activity updates, and inbox messages.",
+      "files": [
+        {
+          "path": "src/components/bela-ui/notification-item.tsx",
+          "type": "registry:ui",
+          "target": "~/src/components/bela/notification-item.tsx"
+        }
+      ]
+    }
+  ]
+}
